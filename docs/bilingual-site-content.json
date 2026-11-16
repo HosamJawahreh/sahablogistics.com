@@ -1,0 +1,333 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "native_name": "English",
+      "direction": "ltr",
+      "is_default": true,
+      "is_active": true,
+      "sort_order": 1
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "native_name": "العربية",
+      "direction": "rtl",
+      "is_default": false,
+      "is_active": true,
+      "sort_order": 2
+    }
+  ],
+  "company": {
+    "name": {
+      "en": "Sahab Logistics",
+      "ar": "شركة سحاب للخدمات اللوجستية"
+    },
+    "domain": "sahablogistics.com",
+    "public_email": "info@sahablogistics.com",
+    "manager_name": "Abdelkareem ALmsaeed",
+    "manager_email": "a.salem@sahablogistics.com",
+    "phone_display": "+962 79 924 8711",
+    "phone_e164": "+962799248711",
+    "whatsapp_number": "962799248711",
+    "headquarters": {
+      "en": "Sahab, Jordan",
+      "ar": "سحاب، الأردن"
+    },
+    "contact_address": {
+      "en": "Jama'at Intersection, 60th Street, Amman, Jordan",
+      "ar": "دوار الجامعة، شارع الستين، عمّان، الأردن"
+    },
+    "google_maps_url": "https://maps.app.goo.gl/CmLVRaxZppgpxUoB7?g_st=iw"
+  },
+  "sections": {
+    "navigation": {
+      "en": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "vision_mission": "Vision & Mission",
+        "global_reach": "Global Reach",
+        "contact": "Contact",
+        "quote": "Request a Quote"
+      },
+      "ar": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "services": "خدماتنا",
+        "vision_mission": "الرؤية والرسالة",
+        "global_reach": "انتشارنا العالمي",
+        "contact": "تواصل معنا",
+        "quote": "اطلب عرض سعر"
+      }
+    },
+    "hero": {
+      "en": {
+        "eyebrow": "TRANSPORTATION SOLUTIONS",
+        "title": "Connecting Jordan with Aqaba Port and Beyond",
+        "description": "Reliable, cost-effective transportation from all areas of Jordan to Aqaba Port, and vice versa.",
+        "primary_cta": "Request a Quote",
+        "secondary_cta": "Our Services"
+      },
+      "ar": {
+        "eyebrow": "حلول النقل",
+        "title": "نربط الأردن بميناء العقبة وما بعده",
+        "description": "خدمات نقل موثوقة وبتكلفة تنافسية من جميع مناطق الأردن إلى ميناء العقبة، وبالعكس.",
+        "primary_cta": "اطلب عرض سعر",
+        "secondary_cta": "خدماتنا"
+      }
+    },
+    "benefits": {
+      "en": [
+        {
+          "title": "Jordan-Wide Coverage",
+          "text": "Transportation from all areas across Jordan."
+        },
+        {
+          "title": "Aqaba Port Connection",
+          "text": "Connecting Jordan with Aqaba Port in both directions."
+        },
+        {
+          "title": "Competitive Pricing",
+          "text": "Cost-effective transportation solutions."
+        },
+        {
+          "title": "Reliable & Efficient Service",
+          "text": "Customer-focused and dependable service."
+        }
+      ],
+      "ar": [
+        {
+          "title": "تغطية جميع مناطق الأردن",
+          "text": "النقل من مختلف مناطق المملكة."
+        },
+        {
+          "title": "الربط مع ميناء العقبة",
+          "text": "ربط الأردن بميناء العقبة في الاتجاهين."
+        },
+        {
+          "title": "أسعار تنافسية",
+          "text": "حلول نقل بتكلفة مناسبة."
+        },
+        {
+          "title": "خدمة موثوقة وفعّالة",
+          "text": "خدمة يمكن الاعتماد عليها وتركّز على العميل."
+        }
+      ]
+    },
+    "about": {
+      "en": {
+        "eyebrow": "ABOUT US",
+        "title": "Sahab Logistics",
+        "paragraphs": [
+          "Sahab Co. is a local leader in transportation solutions, headquartered in Sahab, Jordan. We serve the needs of businesses and individuals through customer-focused service, innovation, and a commitment to sustainability.",
+          "As we approach 2030, we remain committed to pushing the boundaries of innovation and environmental stewardship, aligning our solutions with the evolving demands of a dynamic and interconnected world."
+        ],
+        "pillars": [
+          {
+            "title": "Innovation & Technology",
+            "text": "Embracing modern solutions to improve transportation efficiency and service quality."
+          },
+          {
+            "title": "Sustainability",
+            "text": "Committed to environmentally responsible operations and a cleaner, more connected future."
+          },
+          {
+            "title": "Exceptional Customer Service",
+            "text": "Delivering a reliable, responsive, and customer-focused experience."
+          }
+        ]
+      },
+      "ar": {
+        "eyebrow": "من نحن",
+        "title": "سحاب للخدمات اللوجستية",
+        "paragraphs": [
+          "تُعد شركة سحاب من الشركات المحلية الرائدة في حلول النقل، ويقع مقرها الرئيسي في سحاب، الأردن. نعمل على تلبية احتياجات الشركات والأفراد من خلال خدمة تركز على العميل والابتكار والالتزام بالاستدامة.",
+          "ومع اقتراب عام 2030، نواصل التزامنا بتطوير الابتكار والمسؤولية البيئية، ومواءمة حلولنا مع متطلبات عالم متغير ومترابط."
+        ],
+        "pillars": [
+          {
+            "title": "الابتكار والتكنولوجيا",
+            "text": "اعتماد الحلول الحديثة لتحسين كفاءة النقل وجودة الخدمة."
+          },
+          {
+            "title": "الاستدامة",
+            "text": "الالتزام بعمليات مسؤولة بيئياً ومستقبل أكثر نظافة وترابطاً."
+          },
+          {
+            "title": "خدمة عملاء استثنائية",
+            "text": "تقديم تجربة موثوقة وسريعة الاستجابة تضع العميل في المقام الأول."
+          }
+        ]
+      }
+    },
+    "vision": {
+      "en": {
+        "title": "Our Vision",
+        "text": "To become the world's foremost provider of sustainable and innovative transport solutions. We aspire to set new global standards for efficiency, reliability, and customer satisfaction in the transport industry."
+      },
+      "ar": {
+        "title": "رؤيتنا",
+        "text": "أن نصبح المزود الأول عالمياً لحلول النقل المستدامة والمبتكرة، وأن نضع معايير عالمية جديدة للكفاءة والموثوقية ورضا العملاء في قطاع النقل."
+      }
+    },
+    "mission": {
+      "en": {
+        "title": "Our Mission",
+        "text": "Our mission is to revolutionize the transportation landscape by delivering seamless, eco-friendly, and technologically advanced transport solutions. We are dedicated to enhancing mobility, reducing environmental impact, and providing exceptional service across all our operations."
+      },
+      "ar": {
+        "title": "رسالتنا",
+        "text": "تتمثل رسالتنا في تطوير قطاع النقل من خلال تقديم حلول نقل سلسة وصديقة للبيئة ومتقدمة تقنياً. نلتزم بتعزيز سهولة التنقل والحد من الأثر البيئي وتقديم خدمة استثنائية في جميع عملياتنا."
+      }
+    },
+    "service": {
+      "en": {
+        "eyebrow": "OUR SERVICE",
+        "title": "Jordan – Aqaba Port Transportation",
+        "description": "Sahab Co. provides transportation from all areas in Jordan to Aqaba Port at competitive prices, and return transportation from Aqaba Port to destinations throughout Jordan.",
+        "benefits": [
+          "Two-way transportation",
+          "From all areas in Jordan",
+          "Competitive pricing",
+          "Reliable cargo movement"
+        ]
+      },
+      "ar": {
+        "eyebrow": "خدمتنا",
+        "title": "النقل بين الأردن وميناء العقبة",
+        "description": "تقدم شركة سحاب خدمات النقل من جميع مناطق الأردن إلى ميناء العقبة بأسعار تنافسية، بالإضافة إلى النقل العكسي من ميناء العقبة إلى مختلف مناطق المملكة.",
+        "benefits": [
+          "النقل في الاتجاهين",
+          "من جميع مناطق الأردن",
+          "أسعار تنافسية",
+          "نقل موثوق للبضائع"
+        ]
+      }
+    },
+    "how_we_work": {
+      "en": {
+        "eyebrow": "HOW WE WORK",
+        "title": "A Simple & Reliable Process",
+        "steps": [
+          {
+            "title": "Share Your Transport Needs",
+            "text": "Tell us your origin, destination, and shipment requirements."
+          },
+          {
+            "title": "Plan the Transportation",
+            "text": "Discuss the route, timing, and transport details with our team."
+          },
+          {
+            "title": "Coordinate & Execute",
+            "text": "Coordinate the agreed transportation arrangements."
+          },
+          {
+            "title": "Deliver to Destination",
+            "text": "Move your cargo toward its destination."
+          }
+        ],
+        "approval_note": "Suggested explanatory website copy; not a client-confirmed internal operating procedure. Obtain approval before publication."
+      },
+      "ar": {
+        "eyebrow": "كيف نعمل",
+        "title": "عملية بسيطة وموثوقة",
+        "steps": [
+          {
+            "title": "شارك احتياجات النقل",
+            "text": "أخبرنا بموقع الانطلاق والوجهة ومتطلبات الشحنة."
+          },
+          {
+            "title": "تخطيط عملية النقل",
+            "text": "ناقش المسار والتوقيت وتفاصيل النقل مع فريقنا."
+          },
+          {
+            "title": "التنسيق والتنفيذ",
+            "text": "ننسق ترتيبات النقل التي يتم الاتفاق عليها."
+          },
+          {
+            "title": "التسليم إلى الوجهة",
+            "text": "نحرّك شحنتك باتجاه وجهتها."
+          }
+        ],
+        "approval_note": "هذا محتوى توضيحي مقترح للموقع وليس إجراء تشغيلياً مؤكداً من العميل؛ يجب اعتماده قبل النشر."
+      }
+    },
+    "global_reach": {
+      "en": {
+        "eyebrow": "GLOBAL REACH",
+        "title": "A Global Outlook, Rooted in Jordan",
+        "text": "Sahab Co. states that it has expanded its services globally. From its headquarters in Sahab, the company aims to respond to the needs of businesses and individuals in an increasingly connected world."
+      },
+      "ar": {
+        "eyebrow": "انتشار عالمي",
+        "title": "رؤية عالمية تنطلق من الأردن",
+        "text": "تذكر شركة سحاب أنها وسّعت نطاق خدماتها عالمياً. وانطلاقاً من مقرها الرئيسي في سحاب، تسعى الشركة إلى تلبية احتياجات الشركات والأفراد في عالم يزداد ترابطاً."
+      }
+    },
+    "contact": {
+      "en": {
+        "eyebrow": "GET IN TOUCH",
+        "title": "Let's Move Your Business Forward",
+        "intro": "Have a shipment or transportation request? Our team is ready to help.",
+        "full_name": "Full Name",
+        "company": "Company (Optional)",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "service_direction": "Transportation Direction",
+        "select_direction": "Select a direction",
+        "to_aqaba": "Jordan to Aqaba Port",
+        "from_aqaba": "Aqaba Port to Jordan",
+        "round_trip": "Both directions / Round trip",
+        "general": "General enquiry",
+        "message": "Your Message",
+        "send": "Send Inquiry",
+        "map_title": "Sahab Logistics",
+        "map_address": "Jama'at Intersection, 60th Street, Amman, Jordan",
+        "directions": "View on Google Maps",
+        "success": "Thank you. Your inquiry has been received."
+      },
+      "ar": {
+        "eyebrow": "تواصل معنا",
+        "title": "لندفع أعمالك إلى الأمام",
+        "intro": "هل لديك شحنة أو طلب نقل؟ فريقنا مستعد لمساعدتك.",
+        "full_name": "الاسم الكامل",
+        "company": "الشركة (اختياري)",
+        "email": "البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "service_direction": "اتجاه النقل",
+        "select_direction": "اختر اتجاه النقل",
+        "to_aqaba": "من الأردن إلى ميناء العقبة",
+        "from_aqaba": "من ميناء العقبة إلى الأردن",
+        "round_trip": "الاتجاهان / ذهاب وإياب",
+        "general": "استفسار عام",
+        "message": "رسالتك",
+        "send": "إرسال الاستفسار",
+        "map_title": "شركة سحاب للخدمات اللوجستية",
+        "map_address": "دوار الجامعة، شارع الستين، عمّان، الأردن",
+        "directions": "عرض الموقع على خرائط Google",
+        "success": "شكراً لك. تم استلام استفسارك."
+      }
+    },
+    "footer": {
+      "en": {
+        "company": "Sahab Logistics",
+        "company_ar": "شركة سحاب للخدمات اللوجستية",
+        "copyright": "All rights reserved."
+      },
+      "ar": {
+        "company": "سحاب للخدمات اللوجستية",
+        "company_ar": "شركة سحاب للخدمات اللوجستية",
+        "copyright": "جميع الحقوق محفوظة."
+      }
+    }
+  },
+  "content_notes": [
+    "The only confirmed service is transport from all areas in Jordan to Aqaba Port and vice versa.",
+    "Do not add customs clearance, warehousing, freight forwarding, overseas offices, fleet counts, shipment statistics, certifications, business hours, or named international routes.",
+    "The company profile says headquarters in Sahab, Jordan. The separately supplied contact address is Jama'at Intersection, 60th Street, Amman, Jordan. Preserve both facts separately.",
+    "The How We Work section is draft explanatory copy and needs client approval before publication.",
+    "The Global Reach section reflects the client's claim of global expansion but must not invent countries, branches, partners, or routes."
+  ]
+}
