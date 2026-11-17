@@ -170,11 +170,17 @@
         background-image: none;
     }
 
-    .hero-visual { display: block; }
+    .hero-visual,
+    .hero-visual picture {
+        display: block;
+        width: 100vw;
+        max-width: none;
+    }
 
     .hero-photo {
-        width: 100%;
-        aspect-ratio: 2172 / 724;
+        width: 100vw;
+        max-width: none;
+        aspect-ratio: 4 / 5;
         height: auto;
         object-fit: contain;
     }

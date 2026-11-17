@@ -199,7 +199,6 @@
     @endif
 
     <section class="work-global">
-        <img class="work-global-scene" src="{{ asset('assets/images/sections/global-reach-scene.jpg') }}" alt="" width="1024" height="404">
         @if ($howWeWork)
             <div class="site-wrap process-row process">
                 <div>

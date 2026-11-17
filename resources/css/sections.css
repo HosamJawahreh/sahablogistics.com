@@ -242,18 +242,12 @@
     position: relative;
     padding: 0 0 1rem;
     background-color: #e7f4fd;
+    background-image: url('/assets/images/sections/global-reach-scene.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
     min-height: calc(100vw * 404 / 1024);
     overflow: hidden;
-}
-.work-global-scene {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    pointer-events: none;
 }
 .process-row {
     position: relative;
@@ -579,7 +573,7 @@
         min-height: 0;
         padding-bottom: 1rem;
     }
-    .work-global-scene { object-position: left center; }
+    .work-global { background-position: left center; }
     .global-stage { min-height: 0; margin-top: 0; padding-bottom: 1.5rem; }
     .process-line { white-space: normal; }
     .global-media { display: none; }
