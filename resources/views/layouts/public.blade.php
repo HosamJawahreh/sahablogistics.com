@@ -55,7 +55,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/brand/favicon/apple-touch-icon-180.png') }}?v=r8">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}?v=r8">
     @if ($hero ?? null)
-        <link rel="preload" as="image" href="{{ asset('assets/images/hero/hero-aqaba-desktop.webp') }}">
+        <link rel="preload" as="image" href="{{ asset('assets/images/hero/hero-aqaba-desktop.webp') }}" media="(min-width: 960px)">
+        <link rel="preload" as="image" href="{{ asset('assets/images/hero/hero-aqaba-mobile.webp') }}" media="(max-width: 959px)">
     @endif
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])

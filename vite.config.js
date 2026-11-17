@@ -11,9 +11,11 @@ export default defineConfig({
             fonts: [
                 bunny('Inter', {
                     weights: [500, 600, 700, 800],
+                    optimizedFallbacks: false,
                 }),
                 bunny('Cairo', {
                     weights: [700, 800],
+                    optimizedFallbacks: false,
                 }),
             ],
         }),

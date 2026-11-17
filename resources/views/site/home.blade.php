@@ -12,12 +12,16 @@
     $whatsappUrl = 'https://wa.me/962799248711';
     $mapsUrl = setting('location.google_maps_url', 'https://maps.app.goo.gl/CmLVRaxZppgpxUoB7?g_st=iw');
     $mapQuery = setting('location.map_query', 'Jama\'at Intersection, 60th Street, Amman, Jordan');
-    $mapEmbed = 'https://maps.google.com/maps?q='.rawurlencode($mapQuery).'&output=embed&hl='.app()->getLocale();
+    // OpenStreetMap tiles centered on the current Sahab Logistics pin.
+    $mapTileZoom = 16;
+    $mapTileStartX = 39317;
+    $mapTileStartY = 26640;
     $company = localized_setting('company.name', 'Sahab Logistics');
     $hq = localized_setting('company.headquarters', 'Sahab, Jordan');
     $address = localized_setting('company.contact_address', 'Jama\'at Intersection, 60th Street, Amman, Jordan');
     $heroDesktop = asset('assets/images/hero/hero-aqaba-desktop.webp');
     $heroMobile = asset('assets/images/hero/hero-aqaba-mobile.webp');
+    $workGlobalBackground = asset('assets/images/sections/global-reach-scene.jpg');
     $heroAlt = data_get($hero?->media, 'alt.'.app()->getLocale())
         ?: data_get($hero?->media, 'alt.'.default_locale(), $hero?->t('title', 'Sahab Logistics'));
 @endphp
@@ -69,10 +73,10 @@
 </header>
 
     @if ($hero)
-        <section class="hero" aria-labelledby="hero-title">
+        <section class="hero" aria-labelledby="hero-title" style="--hero-background-image: url('{{ $heroDesktop }}')">
             <div class="hero-visual">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="{{ $heroMobile }}">
+                    <source media="(max-width: 959px)" srcset="{{ $heroMobile }}">
                     <img class="hero-photo" src="{{ $heroDesktop }}" alt="{{ $heroAlt }}" width="2172" height="724" fetchpriority="high">
                 </picture>
             </div>
@@ -87,6 +91,9 @@
                             <span class="hero-line">Connecting Jordan</span>
                             <span class="hero-line">with <span class="accent">Aqaba Port</span></span>
                             <span class="hero-line">and <span class="accent">Beyond</span></span>
+                        @elseif (app()->getLocale() === 'ar' && $hero->t('title') === 'نربط الأردن بميناء العقبة وما بعده')
+                            <span class="hero-line">نربط الأردن بميناء</span>
+                            <span class="hero-line"><span class="accent">العقبة</span> وما بعده</span>
                         @else
                             {{ $hero->t('title') }}
                         @endif
@@ -198,7 +205,7 @@
         </section>
     @endif
 
-    <section class="work-global">
+    <section class="work-global" style="--work-global-background-image: url('{{ $workGlobalBackground }}')">
         @if ($howWeWork)
             <div class="site-wrap process-row process">
                 <div>
@@ -251,6 +258,10 @@
                         <li><x-site-icon name="user" /> <span><a dir="ltr" href="mailto:{{ $managerEmail }}">{{ $managerEmail }}</a> ({{ $managerName }})</span></li>
                         <li><x-site-icon name="location" /> <span>{{ $address }}</span></li>
                     </ul>
+                    <a class="contact-whatsapp" href="{{ $whatsappUrl }}" target="_blank" rel="noopener">
+                        <img src="{{ asset('assets/icons/whatsapp.svg') }}" alt="" width="18" height="18">
+                        <span>WhatsApp</span>
+                    </a>
                 </div>
                 <form class="contact-form" method="post" action="{{ localized_url(app()->getLocale(), '/contact') }}" novalidate>
                     @csrf
@@ -295,10 +306,19 @@
                     <button class="btn btn-primary btn-md" type="submit"><x-site-icon name="send" />{{ $contact->t('send') }}</button>
                 </form>
                 <div class="contact-map">
-                    <a class="map-illustration" href="{{ $mapsUrl }}" target="_blank" rel="noopener" aria-label="{{ $contact->t('directions') }}">
-                        <img src="{{ asset('assets/images/reference-crops/contact-map-preview-reference-1024.webp') }}" alt="" width="200" height="118" loading="lazy">
-                    </a>
-                    <iframe class="map-embed-fallback" title="{{ $contact->t('map_title') }}" src="{{ $mapEmbed }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" hidden></iframe>
+                    <div class="map-frame">
+                        <a class="map-tiles-link" href="{{ $mapsUrl }}" target="_blank" rel="noopener" aria-label="{{ $contact->t('directions') }}: {{ $mapQuery }}">
+                            <span class="map-tiles" aria-hidden="true">
+                                @for ($tileRow = 0; $tileRow < 2; $tileRow++)
+                                    @for ($tileColumn = 0; $tileColumn < 3; $tileColumn++)
+                                        <img src="https://tile.openstreetmap.org/{{ $mapTileZoom }}/{{ $mapTileStartX + $tileColumn }}/{{ $mapTileStartY + $tileRow }}.png" alt="" width="256" height="256" loading="lazy">
+                                    @endfor
+                                @endfor
+                            </span>
+                            <span class="map-marker" aria-hidden="true"><x-site-icon name="location" /></span>
+                        </a>
+                        <a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>
+                    </div>
                     <div class="map-caption">
                         <strong>{{ $contact->t('map_title', $company) }}</strong>
                         <p>{{ $contact->t('map_address', $address) }}</p>
