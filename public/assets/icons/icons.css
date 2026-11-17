@@ -1,0 +1,7 @@
+.icon { width: 1.5rem; height: 1.5rem; display:inline-block; flex:0 0 auto; color:var(--sahab-blue,#087FCB); vertical-align:middle; }
+.icon--lg { width:2rem; height:2rem; }
+.icon--xl { width:2.5rem; height:2.5rem; }
+.icon--cyan { color:var(--sahab-cyan,#00C6EB); }
+.icon--navy { color:var(--sahab-navy,#0A2540); }
+.icon--muted { color:var(--sahab-muted,#61758A); }
+.icon--whatsapp { color:#25D366; }

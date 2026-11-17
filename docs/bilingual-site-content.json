@@ -45,7 +45,7 @@
     "navigation": {
       "en": {
         "home": "Home",
-        "about": "About Us",
+        "about": "About",
         "services": "Services",
         "vision_mission": "Vision & Mission",
         "global_reach": "Global Reach",
@@ -120,9 +120,10 @@
       "en": {
         "eyebrow": "ABOUT US",
         "title": "Sahab Logistics",
+        "cta": "Learn More",
         "paragraphs": [
-          "Sahab Co. is a local leader in transportation solutions, headquartered in Sahab, Jordan. We serve the needs of businesses and individuals through customer-focused service, innovation, and a commitment to sustainability.",
-          "As we approach 2030, we remain committed to pushing the boundaries of innovation and environmental stewardship, aligning our solutions with the evolving demands of a dynamic and interconnected world."
+          "A Jordan-based transportation company headquartered in Sahab, delivering reliable and innovative transportation solutions for businesses and individuals.",
+          "As we move toward 2030, we remain committed to innovation, sustainability, and adapting to the evolving demands of a dynamic and interconnected world."
         ],
         "pillars": [
           {
@@ -142,9 +143,10 @@
       "ar": {
         "eyebrow": "من نحن",
         "title": "سحاب للخدمات اللوجستية",
+        "cta": "اعرف المزيد",
         "paragraphs": [
-          "تُعد شركة سحاب من الشركات المحلية الرائدة في حلول النقل، ويقع مقرها الرئيسي في سحاب، الأردن. نعمل على تلبية احتياجات الشركات والأفراد من خلال خدمة تركز على العميل والابتكار والالتزام بالاستدامة.",
-          "ومع اقتراب عام 2030، نواصل التزامنا بتطوير الابتكار والمسؤولية البيئية، ومواءمة حلولنا مع متطلبات عالم متغير ومترابط."
+          "شركة نقل أردنية مقرها سحاب، تقدّم حلول نقل موثوقة ومبتكرة للشركات والأفراد.",
+          "ومع توجهنا نحو عام 2030، نبقى ملتزمين بالابتكار والاستدامة ومواكبة متطلبات عالم متغير ومترابط."
         ],
         "pillars": [
           {
@@ -165,7 +167,7 @@
     "vision": {
       "en": {
         "title": "Our Vision",
-        "text": "To become the world's foremost provider of sustainable and innovative transport solutions. We aspire to set new global standards for efficiency, reliability, and customer satisfaction in the transport industry."
+        "text": "To become the world's foremost provider of sustainable and innovative transport solutions, setting new global standards for efficiency, reliability, and customer satisfaction."
       },
       "ar": {
         "title": "رؤيتنا",
@@ -175,7 +177,7 @@
     "mission": {
       "en": {
         "title": "Our Mission",
-        "text": "Our mission is to revolutionize the transportation landscape by delivering seamless, eco-friendly, and technologically advanced transport solutions. We are dedicated to enhancing mobility, reducing environmental impact, and providing exceptional service across all our operations."
+        "text": "To revolutionize the transportation landscape by delivering seamless, eco-friendly, and technologically advanced transport solutions, enhancing mobility, reducing environmental impact, and providing exceptional service."
       },
       "ar": {
         "title": "رسالتنا",
@@ -186,12 +188,12 @@
       "en": {
         "eyebrow": "OUR SERVICE",
         "title": "Jordan – Aqaba Port Transportation",
-        "description": "Sahab Co. provides transportation from all areas in Jordan to Aqaba Port at competitive prices, and return transportation from Aqaba Port to destinations throughout Jordan.",
+        "description": "Reliable transportation from all areas across Jordan to Aqaba Port, and return transportation from Aqaba Port to destinations throughout Jordan.",
         "benefits": [
-          "Two-way transportation",
-          "From all areas in Jordan",
-          "Competitive pricing",
-          "Reliable cargo movement"
+          "Two-Way Transportation",
+          "From All Areas in Jordan",
+          "Competitive Pricing",
+          "Reliable Cargo Movement"
         ]
       },
       "ar": {
@@ -224,7 +226,7 @@
             "text": "Coordinate the agreed transportation arrangements."
           },
           {
-            "title": "Deliver to Destination",
+            "title": "Deliver on Time",
             "text": "Move your cargo toward its destination."
           }
         ],
@@ -247,7 +249,7 @@
             "text": "ننسق ترتيبات النقل التي يتم الاتفاق عليها."
           },
           {
-            "title": "التسليم إلى الوجهة",
+            "title": "التسليم في الوقت المحدد",
             "text": "نحرّك شحنتك باتجاه وجهتها."
           }
         ],
@@ -257,19 +259,19 @@
     "global_reach": {
       "en": {
         "eyebrow": "GLOBAL REACH",
-        "title": "A Global Outlook, Rooted in Jordan",
-        "text": "Sahab Co. states that it has expanded its services globally. From its headquarters in Sahab, the company aims to respond to the needs of businesses and individuals in an increasingly connected world."
+        "title": "Beyond Borders",
+        "text": "With a growing global presence, we connect businesses and individuals to wider markets through reliable and sustainable transportation solutions."
       },
       "ar": {
         "eyebrow": "انتشار عالمي",
-        "title": "رؤية عالمية تنطلق من الأردن",
-        "text": "تذكر شركة سحاب أنها وسّعت نطاق خدماتها عالمياً. وانطلاقاً من مقرها الرئيسي في سحاب، تسعى الشركة إلى تلبية احتياجات الشركات والأفراد في عالم يزداد ترابطاً."
+        "title": "ما وراء الحدود",
+        "text": "مع حضور عالمي متنامٍ، نربط الشركات والأفراد بأسواق أوسع عبر حلول نقل موثوقة ومستدامة."
       }
     },
     "contact": {
       "en": {
         "eyebrow": "GET IN TOUCH",
-        "title": "Let's Move Your Business Forward",
+        "title": "Get in Touch",
         "intro": "Have a shipment or transportation request? Our team is ready to help.",
         "full_name": "Full Name",
         "company": "Company (Optional)",

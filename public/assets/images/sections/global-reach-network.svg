@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" fill="none">
+<defs><radialGradient id="g" cx="50%" cy="45%" r="55%"><stop stop-color="#159BE0" stop-opacity=".28"/><stop offset="1" stop-color="#052A52" stop-opacity="0"/></radialGradient><linearGradient id="line" x1="80" y1="65" x2="680" y2="380"><stop stop-color="#00D5F5"/><stop offset="1" stop-color="#1686D9"/></linearGradient></defs>
+<ellipse cx="380" cy="215" rx="330" ry="188" fill="url(#g)"/>
+<g stroke="#58BDEB" stroke-opacity=".25" stroke-width="1.2"><ellipse cx="380" cy="215" rx="292" ry="166"/><ellipse cx="380" cy="215" rx="210" ry="166"/><ellipse cx="380" cy="215" rx="105" ry="166"/><path d="M88 215h584M120 145h520M120 285h520"/></g>
+<g fill="#19BDEB" fill-opacity=".78">
+<path d="M183 114l24-14 35 4 12 17-18 19-36-2-17-24zm55 32 26 1 15 18-6 32-18 16-16-24-1-43zm-68 41 23-8 14 24-14 25-24-8-8-21 9-12zm99-89 30-18 23 7 18-9 20 18-12 19-27-2-14 17-30-9-8-23zm68 49 30-18 49 9 28 22-7 27-32 4-20 27-33-7-11-28-28-10 24-26zm86-61 31-10 19 13 32-3 18 16-19 19-28-7-15 18-34-8-4-22zm92 78 28-14 31 9 14 22-20 19-35-5-18-17zm-79 61 31-15 33 9 7 23-18 24-34 2-22-18 3-25zm-115 44 33-16 31 12 12 29-19 18-35-6-21-17-1-20zm176-152 18-9 20 10-7 17-22 1-9-19z"/>
+</g>
+<g stroke="url(#line)" stroke-width="2.5" stroke-linecap="round" stroke-opacity=".95"><path d="M190 185 297 118 402 158 530 116 607 201 512 274 392 234 285 292 190 185"/><path d="M297 118 392 234 530 116M402 158 512 274 607 201"/></g>
+<g fill="#D5F7FF" stroke="#00C9F0" stroke-width="3"><circle cx="190" cy="185" r="7"/><circle cx="297" cy="118" r="7"/><circle cx="402" cy="158" r="7"/><circle cx="530" cy="116" r="7"/><circle cx="607" cy="201" r="7"/><circle cx="512" cy="274" r="7"/><circle cx="392" cy="234" r="7"/><circle cx="285" cy="292" r="7"/></g>
+</svg>
