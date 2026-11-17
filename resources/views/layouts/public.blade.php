@@ -16,6 +16,21 @@
         $phone = setting('contact.phone_e164', '+962799248711');
         $email = setting('contact.public_email', 'info@sahablogistics.com');
         $address = localized_setting('company.contact_address', 'Jama\'at Intersection, 60th Street, Amman, Jordan');
+        $schemaJson = json_encode([
+            '@'.'context' => 'https://schema.org',
+            '@'.'type' => 'LocalBusiness',
+            'name' => localized_setting('company.name', 'Sahab Logistics'),
+            'url' => 'https://'.$domain,
+            'email' => $email,
+            'telephone' => $phone,
+            'image' => $logoLight,
+            'address' => [
+                '@'.'type' => 'PostalAddress',
+                'streetAddress' => $address,
+                'addressCountry' => 'JO',
+            ],
+            'areaServed' => ['Jordan', 'Aqaba Port'],
+        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     @endphp
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
@@ -34,29 +49,17 @@
     <meta name="twitter:title" content="{{ $title }}">
     <meta name="twitter:description" content="{{ $description }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
-    <link rel="icon" href="{{ $favicon }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/brand/favicon-256.png') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}?v=r8" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/brand/favicon/favicon-32.png') }}?v=r8">
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/brand/favicon/favicon-48.png') }}?v=r8">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/brand/favicon/apple-touch-icon-180.png') }}?v=r8">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}?v=r8">
     @if ($hero ?? null)
-        <link rel="preload" as="image" href="{{ $hero->mediaPath('desktop', asset('assets/images/hero-aqaba-desktop.webp')) }}" imagesrcset="{{ $hero->mediaPath('mobile', asset('assets/images/hero-aqaba-mobile.webp')) }} 768w, {{ $hero->mediaPath('desktop', asset('assets/images/hero-aqaba-desktop.webp')) }} 1440w">
+        <link rel="preload" as="image" href="{{ asset('assets/images/hero/hero-aqaba-desktop.webp') }}">
     @endif
+    @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script type="application/ld+json">
-        {!! json_encode([
-            '@context' => 'https://schema.org',
-            '@type' => 'LocalBusiness',
-            'name' => localized_setting('company.name', 'Sahab Logistics'),
-            'url' => 'https://'.$domain,
-            'email' => $email,
-            'telephone' => $phone,
-            'image' => $logoLight,
-            'address' => [
-                '@type' => 'PostalAddress',
-                'streetAddress' => $address,
-                'addressCountry' => 'JO',
-            ],
-            'areaServed' => ['Jordan', 'Aqaba Port'],
-        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}
-    </script>
+    <script type="application/ld+json">{!! $schemaJson !!}</script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>

@@ -47,7 +47,7 @@ class SiteContentSeeder extends Seeder
         ]);
 
         $this->upsertSection($page, 'hero', 'hero', 1, $sections['hero'], [
-            'desktop' => '/assets/images/hero-aqaba-desktop.webp',
+            'desktop' => '/assets/images/hero/hero-aqaba-desktop.webp',
             'mobile' => '/assets/images/hero-aqaba-mobile.webp',
             'alt' => [
                 'en' => 'White freight truck on the road toward Aqaba Port at sunset',
@@ -63,12 +63,12 @@ class SiteContentSeeder extends Seeder
         $this->upsertSection($page, 'about', 'about', 3, [
             'en' => [
                 ...$sections['about']['en'],
-                'cta' => $sections['navigation']['en']['about'],
+                'cta' => $sections['about']['en']['cta'] ?? 'Learn More',
                 'pillars' => $this->withIcons($sections['about']['en']['pillars'], $pillarIcons),
             ],
             'ar' => [
                 ...$sections['about']['ar'],
-                'cta' => $sections['navigation']['ar']['about'],
+                'cta' => $sections['about']['ar']['cta'] ?? 'اعرف المزيد',
                 'pillars' => $this->withIcons($sections['about']['ar']['pillars'], $pillarIcons),
             ],
         ], [

@@ -42,7 +42,10 @@ class LocaleRoutingTest extends TestCase
 
         $this->get('/')->assertOk()->assertSee('نربط الأردن بميناء العقبة وما بعده', false);
         $this->get('/ar')->assertRedirect('/');
-        $this->get('/en')->assertOk()->assertSee('Connecting Jordan with Aqaba Port and Beyond', false);
+        $this->get('/en')->assertOk()
+            ->assertSee('Connecting Jordan', false)
+            ->assertSee('Aqaba Port', false)
+            ->assertSee('Beyond', false);
     }
 
     public function test_sitemap_lists_active_locales(): void

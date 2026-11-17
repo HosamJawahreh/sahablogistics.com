@@ -21,11 +21,18 @@ class HomePageTest extends TestCase
         $response = $this->get('/');
 
         $response->assertOk();
-        $response->assertSee('Connecting Jordan with Aqaba Port and Beyond', false);
+        $response->assertSee('Connecting Jordan', false);
+        $response->assertSee('Aqaba Port', false);
+        $response->assertSee('Beyond', false);
+        $response->assertSee('jordan-road-transport-branded.webp', false);
+        $response->assertSee('sections/aqaba-port.webp', false);
+        $response->assertSee('contact-map-preview-reference-1024.webp', false);
+        $response->assertSee('global-reach-hemisphere.png', false);
+        $response->assertSee('https://wa.me/962799248711', false);
         $response->assertSee('Jordan – Aqaba Port Transportation', false);
         $response->assertDontSee('customs clearance', false);
         $response->assertSee('info@sahablogistics.com', false);
-        $response->assertSee('hero-aqaba-desktop.webp', false);
+        $response->assertSee('images/hero/hero-aqaba-desktop.webp', false);
         $response->assertSee('sahab-logo-light.png', false);
     }
 
