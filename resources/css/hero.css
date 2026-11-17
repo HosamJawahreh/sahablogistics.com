@@ -1,15 +1,22 @@
 /* Hero — approved mock; hero-aqaba-desktop.webp unchanged */
 
+:root {
+    /* Full photo inside the shared column — image asset unchanged */
+    --hero-h: auto;
+}
+
 .hero {
     position: relative;
-    min-height: 266px;
-    height: 266px;
-    overflow: hidden;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 2172 / 724;
+    overflow: visible;
     background-color: #d7ebf8;
     background-image: url('/assets/images/hero/hero-aqaba-desktop.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 68% 70%;
+    background-position: center center;
 }
 
 .hero::before {
@@ -34,7 +41,9 @@
     right: 0;
     bottom: -1px;
     width: 100%;
+    max-width: none;
     height: 36px;
+    transform: none;
     z-index: 2;
     pointer-events: none;
 }
@@ -45,30 +54,34 @@
     position: relative;
     z-index: 3;
     width: var(--page-inner);
-    max-width: 1650px;
+    max-width: none;
     height: 100%;
+    aspect-ratio: auto;
     margin-inline: auto;
     display: flex;
-    align-items: flex-start;
-    padding-top: clamp(10px, 1.2vw, 16px);
-    padding-bottom: 6px;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 48px;
     padding-inline: 0;
+    overflow: visible;
+    background: none;
 }
 
 .hero-copy {
-    width: 32%;
-    max-width: 340px;
+    position: relative;
+    z-index: 2;
+    width: 31%;
+    max-width: 318px;
     flex: 0 0 auto;
 }
 
 .hero-line {
     display: block;
-    white-space: nowrap;
 }
 
 .hero .eyebrow {
-    margin: 0 0 .2rem;
-    color: var(--navy);
+    margin: 0 0 .3rem;
+    color: var(--title);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .24em;
@@ -76,23 +89,23 @@
 }
 
 .hero h1 {
-    margin: 0 0 .15rem;
+    margin: 0 0 .25rem;
     font-size: 34px;
-    line-height: 1.02;
+    line-height: 1.05;
     font-weight: 800;
-    color: var(--navy);
+    color: var(--title);
     letter-spacing: -.03em;
 }
 
 .hero h1 .accent { color: var(--blue); }
 
 .hero-lead {
-    margin: .25rem 0 .5rem;
+    margin: .35rem 0 .65rem;
     max-width: 35ch;
     color: var(--body);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: var(--text-body-lh, 1.5);
 }
 
 .hero-actions {
@@ -102,43 +115,39 @@
 }
 
 .hero-actions .btn {
-    height: 32px;
-    padding: 0 .75rem;
-    font-size: 12px;
+    height: 36px;
+    padding: 0 .85rem;
+    font-size: 13px;
     font-weight: 600;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .hero-actions .btn-primary {
-    box-shadow: 0 4px 11px rgba(7, 140, 225, .17);
+    box-shadow: 0 6px 14px rgba(7, 140, 225, .2);
 }
 
 .hero-actions .btn-light {
     border: 1px solid #c5d9ea;
-    color: var(--navy);
+    color: var(--title);
     background: #fff;
 }
 
-/* Keep approved geometry on all desktop widths */
+/* Full photograph, same left and right edges as the header */
 @media (min-width: 1024px) {
     .hero {
-        height: 266px;
-        min-height: 266px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
     }
 
     .hero-copy {
-        width: 31%;
-        max-width: 318px;
+        width: min(36%, 460px);
+        max-width: none;
     }
 
     .hero h1 {
-        font-size: 34px;
-        line-height: 1.04;
-    }
-
-    .hero-lead {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: clamp(32px, 2.2vw, 42px);
+        line-height: 1.05;
     }
 }
 
@@ -146,12 +155,20 @@
     .hero {
         height: auto;
         min-height: 0;
+        aspect-ratio: auto;
         background-image: none;
         background-color: var(--page);
     }
 
     .hero::before,
     .hero-curve { display: none; }
+
+    .hero-stage {
+        aspect-ratio: auto;
+        height: auto;
+        padding-bottom: 0;
+        background-image: none;
+    }
 
     .hero-visual { display: block; }
 

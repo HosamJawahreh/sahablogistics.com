@@ -1,7 +1,7 @@
 /* SAHAB public site header — scoped styles only */
 
 :root {
-    --header-h: clamp(58px, 4.6vw, 66px);
+    --header-h: 60px;
 }
 
 html {
@@ -13,13 +13,15 @@ html {
     top: 0;
     z-index: 100;
     min-height: var(--header-h);
-    background: linear-gradient(180deg, #e4f3fc 0%, #edf7fd 48%, #f8fbfe 100%);
-    border-bottom: 1px solid rgba(154, 210, 247, .55);
+    height: var(--header-h);
+    max-height: var(--header-h);
+    background: linear-gradient(180deg, #e4f3fc 0%, #f3f9fe 55%, #f8fbfe 100%);
+    border-bottom: 1px solid rgba(154, 210, 247, .45);
     transition: box-shadow .2s ease, background .2s ease;
 }
 
 .site-header.is-scrolled {
-    background: linear-gradient(180deg, rgba(228, 243, 252, .98) 0%, rgba(237, 247, 253, .98) 50%, rgba(248, 251, 254, .98) 100%);
+    background: linear-gradient(180deg, rgba(228, 243, 252, .98) 0%, rgba(248, 251, 254, .98) 100%);
     box-shadow: 0 4px 14px rgba(10, 26, 66, .05);
     border-bottom-color: #9ad2f7;
 }
@@ -28,7 +30,8 @@ html {
     display: flex;
     align-items: center;
     gap: clamp(.65rem, 1.4vw, 1.35rem);
-    width: var(--header-inner);
+    width: var(--page-inner, calc(100% - 32px));
+    max-width: none;
     min-height: var(--header-h);
     margin-inline: auto;
     padding-inline: 0;
@@ -42,8 +45,9 @@ html {
 
 .brand img {
     width: auto;
-    height: clamp(36px, 3.1vw, 44px);
-    max-width: min(220px, 26vw);
+    height: 36px;
+    max-width: 190px;
+    object-fit: contain;
     background: transparent;
 }
 
@@ -51,7 +55,7 @@ html {
     flex: 0 0 auto;
     align-self: center;
     width: 1px;
-    height: clamp(28px, 2.4vw, 34px);
+    height: clamp(36px, 3.2vw, 46px);
     background: linear-gradient(180deg, rgba(183, 221, 246, .35), #b7ddf6 50%, rgba(183, 221, 246, .35));
 }
 
@@ -60,13 +64,13 @@ html {
     align-items: center;
     justify-content: center;
     flex: 1 1 auto;
-    gap: clamp(.45rem, 1vw, 1.25rem);
+    gap: clamp(.45rem, 1.05vw, 1.35rem);
     min-width: 0;
-    margin-inline: clamp(.2rem, .6vw, .6rem);
+    margin-inline: clamp(.25rem, .8vw, .75rem);
     color: var(--navy);
-    font-size: clamp(12px, .88vw, 14px);
+    font-size: clamp(13px, 1.05vw, 16px);
     font-weight: 600;
-    line-height: 1.15;
+    line-height: 1.2;
 }
 
 .site-nav__links {
@@ -79,7 +83,7 @@ html {
 
 .site-nav a {
     position: relative;
-    padding: .15rem .12rem .22rem;
+    padding: .35rem .1rem;
     white-space: nowrap;
     color: var(--navy);
     transition: color .15s ease;
@@ -94,7 +98,7 @@ html {
     position: absolute;
     left: 18%;
     right: 18%;
-    bottom: 1px;
+    bottom: 0;
     height: 2px;
     border-radius: 2px;
     background: var(--cyan);
@@ -113,8 +117,8 @@ html {
     display: inline-flex;
     align-items: stretch;
     flex: 0 0 auto;
-    width: clamp(76px, 5.8vw, 86px);
-    height: clamp(28px, 2.2vw, 32px);
+    width: clamp(82px, 6.4vw, 92px);
+    height: clamp(34px, 2.6vw, 38px);
     padding: 2px;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -153,13 +157,13 @@ html {
 .header-cta {
     flex: 0 0 auto;
     display: none;
-    min-width: clamp(118px, 10vw, 156px);
-    height: 32px;
-    padding-inline: clamp(.65rem, .9vw, .95rem);
-    border-radius: 11px;
-    font-size: 13px;
+    min-width: clamp(128px, 11vw, 168px);
+    height: clamp(36px, 2.7vw, 40px);
+    padding-inline: clamp(.75rem, 1vw, 1.1rem);
+    border-radius: 14px;
+    font-size: clamp(12px, .95vw, 15px);
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(7, 140, 225, .18);
+    box-shadow: 0 6px 16px rgba(7, 140, 225, .22);
 }
 
 .header-cta .icon {
@@ -194,31 +198,12 @@ html {
 }
 
 @media (min-width: 1024px) {
-    .header-inner {
-        width: var(--page-inner);
-        max-width: 1650px;
-    }
-
-    .site-nav__links {
-        flex-wrap: nowrap;
-    }
-
-    .site-nav a {
-        white-space: nowrap;
-        font-size: 14px;
-    }
-
-    .site-nav__links {
-        gap: clamp(.85rem, 1.15vw, 1.35rem);
-    }
-
-    .brand img {
-        height: 42px;
-        max-width: 200px;
-    }
+    :root { --header-h: 64px; }
+    .brand img { height: 46px; max-width: 220px; }
+    .header-cta { height: 32px; font-size: 13px; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .site-header .site-nav {
         position: static;
         display: flex !important;
@@ -245,7 +230,7 @@ html {
     }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1023px) {
     .site-nav__links .lang-switch--desktop {
         display: none;
     }
@@ -255,7 +240,7 @@ html {
     }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1023px) {
     .header-divider {
         display: none;
     }
@@ -266,7 +251,7 @@ html {
 
     .site-nav {
         position: absolute;
-        inset-inline: max(5%, calc((100% - var(--header-inner)) / 2));
+        inset-inline: var(--page-gutter, 16px);
         top: calc(100% + 6px);
         z-index: 110;
         display: none;
@@ -337,7 +322,7 @@ html {
     }
 }
 
-@media (max-width: 1199px) and (min-width: 768px) {
+@media (max-width: 1023px) and (min-width: 768px) {
     .header-cta--compact .header-cta__label {
         display: inline;
     }

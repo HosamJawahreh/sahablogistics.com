@@ -24,10 +24,10 @@ class HomePageTest extends TestCase
         $response->assertSee('Connecting Jordan', false);
         $response->assertSee('Aqaba Port', false);
         $response->assertSee('Beyond', false);
-        $response->assertSee('jordan-road-transport-branded.webp', false);
-        $response->assertSee('sections/aqaba-port.webp', false);
+        $response->assertSee('service-truck-reference-1024.webp', false);
+        $response->assertSee('about-port-reference-1024.webp', false);
         $response->assertSee('contact-map-preview-reference-1024.webp', false);
-        $response->assertSee('global-reach-hemisphere.png', false);
+        $response->assertSee('global-reach-scene.jpg', false);
         $response->assertSee('https://wa.me/962799248711', false);
         $response->assertSee('Jordan – Aqaba Port Transportation', false);
         $response->assertDontSee('customs clearance', false);

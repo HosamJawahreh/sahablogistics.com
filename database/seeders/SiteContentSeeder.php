@@ -72,7 +72,7 @@ class SiteContentSeeder extends Seeder
                 'pillars' => $this->withIcons($sections['about']['ar']['pillars'], $pillarIcons),
             ],
         ], [
-            'image' => '/assets/images/aqaba-port.webp',
+            'image' => '/assets/images/reference-crops/about-port-reference-1024.webp',
             'alt' => [
                 'en' => 'Aqaba Port with container ship, cranes and the Jordan flag',
                 'ar' => 'ميناء العقبة مع سفينة حاويات ورافعات وعلم الأردن',
@@ -92,7 +92,7 @@ class SiteContentSeeder extends Seeder
                 'benefits' => $this->stringListWithIcons($sections['service']['ar']['benefits'], $serviceIcons),
             ],
         ], [
-            'image' => '/assets/images/jordan-road-transport.webp',
+            'image' => '/assets/images/reference-crops/service-truck-reference-1024.webp',
             'alt' => [
                 'en' => 'Freight truck used for Jordan to Aqaba Port transportation',
                 'ar' => 'شاحنة نقل لخدمة النقل بين الأردن وميناء العقبة',

@@ -84,8 +84,9 @@
                     <p class="eyebrow">{{ $hero->t('eyebrow') }}</p>
                     <h1 id="hero-title" class="hero-title">
                         @if ($hero->t('title') === 'Connecting Jordan with Aqaba Port and Beyond')
-                            <span class="hero-line">Connecting Jordan with</span>
-                            <span class="hero-line"><span class="accent">Aqaba Port and Beyond</span></span>
+                            <span class="hero-line">Connecting Jordan</span>
+                            <span class="hero-line">with <span class="accent">Aqaba Port</span></span>
+                            <span class="hero-line">and <span class="accent">Beyond</span></span>
                         @else
                             {{ $hero->t('title') }}
                         @endif
@@ -143,34 +144,33 @@
                     </div>
                 </div>
                 <div class="about-frame">
-                    <img src="{{ asset('assets/images/sections/aqaba-port.webp') }}" alt="{{ data_get($about->media, 'alt.'.app()->getLocale()) ?: data_get($about->media, 'alt.'.default_locale(), 'Aqaba Port') }}" width="1600" height="700" loading="lazy">
+                    <img src="{{ asset('assets/images/reference-crops/about-port-reference-1024.webp') }}" alt="{{ data_get($about->media, 'alt.'.app()->getLocale()) ?: data_get($about->media, 'alt.'.default_locale(), 'Aqaba Port') }}" width="619" height="199" loading="lazy" decoding="async">
                 </div>
             </div>
-        </section>
-    @endif
-
-    @if ($vision || $mission)
-        <section id="vision" class="vision-mission">
-            <div class="site-wrap vm-grid">
-                @if ($vision)
-                    <article class="vm-card">
-                        <span class="vm-icon"><x-site-icon name="eye" /></span>
-                        <div>
-                            <h2>{{ $vision->t('title') }}</h2>
-                            <p>{{ $vision->t('text') }}</p>
-                        </div>
-                    </article>
-                @endif
-                @if ($mission)
-                    <article class="vm-card">
-                        <span class="vm-icon"><x-site-icon name="target" /></span>
-                        <div>
-                            <h2>{{ $mission->t('title') }}</h2>
-                            <p>{{ $mission->t('text') }}</p>
-                        </div>
-                    </article>
-                @endif
-            </div>
+            @if ($vision || $mission)
+                <div id="vision" class="about-vm site-wrap">
+                    <div class="vm-grid">
+                        @if ($vision)
+                            <article class="vm-card">
+                                <span class="vm-icon"><x-site-icon name="eye" /></span>
+                                <div>
+                                    <h2>{{ $vision->t('title') }}</h2>
+                                    <p>{{ $vision->t('text') }}</p>
+                                </div>
+                            </article>
+                        @endif
+                        @if ($mission)
+                            <article class="vm-card">
+                                <span class="vm-icon"><x-site-icon name="target" /></span>
+                                <div>
+                                    <h2>{{ $mission->t('title') }}</h2>
+                                    <p>{{ $mission->t('text') }}</p>
+                                </div>
+                            </article>
+                        @endif
+                    </div>
+                </div>
+            @endif
         </section>
     @endif
 
@@ -192,13 +192,14 @@
                     </ul>
                 </div>
                 <div class="service-media">
-                    <img src="{{ asset('assets/images/sections/jordan-road-transport-branded.webp') }}" alt="{{ data_get($service->media, 'alt.'.app()->getLocale()) ?: data_get($service->media, 'alt.'.default_locale(), $service->t('title')) }}" width="830" height="650" loading="lazy">
+                    <img src="{{ asset('assets/images/reference-crops/service-truck-reference-1024.webp') }}" alt="{{ data_get($service->media, 'alt.'.app()->getLocale()) ?: data_get($service->media, 'alt.'.default_locale(), $service->t('title')) }}" width="439" height="175" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
     @endif
 
     <section class="work-global">
+        <img class="work-global-scene" src="{{ asset('assets/images/sections/global-reach-scene.jpg') }}" alt="" width="1024" height="404">
         @if ($howWeWork)
             <div class="site-wrap process-row process">
                 <div>
@@ -228,9 +229,6 @@
 
         @if ($globalReach)
             <div class="global-stage">
-                <div class="global-media" aria-hidden="true">
-                    <img src="{{ asset('assets/images/sections/global-reach-hemisphere.png') }}" alt="" width="852" height="296">
-                </div>
                 <div id="global" class="site-wrap wrap-global global-grid global">
                     <div class="global-copy">
                         <p class="eyebrow">{{ $globalReach->t('eyebrow') }}</p>
@@ -250,8 +248,8 @@
                     <p>{{ $contact->t('intro') }}</p>
                     <ul class="contact-list">
                         <li><x-site-icon name="phone" /> <a dir="ltr" href="tel:{{ $phoneE164 }}">{{ $phoneDisplay }}</a></li>
-                        <li><x-site-icon name="email" /> <a class="nowrap" dir="ltr" href="mailto:{{ $publicEmail }}">{{ $publicEmail }}</a></li>
-                        <li><x-site-icon name="user" /> <a class="nowrap" dir="ltr" href="mailto:{{ $managerEmail }}">{{ $managerEmail }}</a> <span>({{ $managerName }})</span></li>
+                        <li><x-site-icon name="email" /> <a dir="ltr" href="mailto:{{ $publicEmail }}">{{ $publicEmail }}</a></li>
+                        <li><x-site-icon name="user" /> <span><a dir="ltr" href="mailto:{{ $managerEmail }}">{{ $managerEmail }}</a> ({{ $managerName }})</span></li>
                         <li><x-site-icon name="location" /> <span>{{ $address }}</span></li>
                     </ul>
                 </div>
@@ -317,6 +315,7 @@
     <div class="site-wrap footer-grid">
         <div class="footer-brand">
             <img src="{{ $logoDark }}" alt="{{ $company }}" width="180" height="48">
+            <span class="footer-divider" aria-hidden="true"></span>
             <div class="footer-names">
                 <p>{{ $footer?->t('company', $company) }}</p>
                 <p>{{ $footer?->t('company_ar', localized_setting('company.name', $company, 'ar')) }}</p>
@@ -333,7 +332,10 @@
     </div>
     <div class="site-wrap copyright">
         <p>© {{ date('Y') }} {{ $company }}. {{ $footer?->t('copyright', 'All rights reserved.') }}</p>
-        <a href="https://{{ setting('company.domain', 'sahablogistics.com') }}">{{ setting('company.domain', 'sahablogistics.com') }}</a>
+        <a class="footer-domain" href="https://{{ setting('company.domain', 'sahablogistics.com') }}">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg>
+            {{ setting('company.domain', 'sahablogistics.com') }}
+        </a>
     </div>
 </footer>
 
